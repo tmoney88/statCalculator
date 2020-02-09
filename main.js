@@ -7,7 +7,6 @@ const hits = document.querySelector('#hits');
 const atBats = document.querySelector('#atBats');
 const calculatedAverage = document.querySelector('.calculatedAverage');
 
-
 function addSelected(e) {
 	// Remove all other selected div's.
 	allSports.forEach(sport => {
@@ -21,10 +20,10 @@ function battingAverage(e) {
 	e.preventDefault();
 	const numHits = hits.value;
 	const numAtBats = atBats.value;
-	const average = ( numHits / numAtBats).toFixed(3);
+	let average = (numHits / numAtBats).toFixed(3);
+	average = average.replace(/^0+/, '');
 	calculatedAverage.textContent = average;
 }
-
 
 baseball.addEventListener('click', addSelected);
 basketball.addEventListener('click', addSelected);
