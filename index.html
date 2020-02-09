@@ -17,20 +17,59 @@
             <div id="baseball-selector" class="sport-selector">
                 <h3>Baseball</h3>
                 <img src="./images/baseball.jpeg" alt="baseball">
+                <form id = "baseball-form" class='forms'>
+                    <p>Calculate Batting Average</p>
+                    <div class="stat-row">
+                        <label for='hits'>Hits</label>
+                        <input id='hits' type='number' min=0>
+                    </div>
+                    <div class="stat-row">
+                        <label for='atBats'>At Bats</label>
+                        <input id='atBats' type='number' min=0>
+                    </div>
+                    <div class="stat-row">
+                        <label for='average'>Average</label>
+                        <p class="calculatedAverage"></p>
+                    </div>
+                    <input type="submit" value='calculate' id="baseballButton">   
+                </form>
             </div>
 
             <div id="basketball-selector" class="sport-selector">
                 <h3>Basketball</h3>
                 <img src="./images/basketball.jpeg" alt="basketball">
+                <form id = "basketball-form" class='forms'>
+                    <p>Calculate Shooting Percentage</p>
+                    <div class="stat-row">
+                        <label for='fgm'>Field Goals Made</label>
+                        <input id='fgm' type='number' min=0>
+                    </div>
+                    <div class="stat-row">
+                        <label for='fga'>Field Goals Attempted</label>
+                        <input id='fga' type='number' min=0>
+                    </div>
+                    <input type="submit" value='calculate' id="basketballButton">
+                </form>
             </div>
 
             <div id="football-selector" class="sport-selector">
                 <h3>Football</h3>
                 <img src="./images/football.jpeg" alt="football">
-            </div>
-
-            
+                <form id = "football-form" class='forms'>
+                    <p>Calculate Passing Completion Percentage</p>
+                    <div class='stat-row'>
+                        <label for='pc'>Passes Completed</label>
+                        <input id='pc' type='number' min=0>
+                    </div>
+                    <div class='stat-row'>
+                        <label for='pa'>Passes Attempted</label>
+                        <input id='pa' type='number' min=0>
+                    </div>
+                    <input type="submit" value='calculate' id="footballButton">
+                </form>
+            </div>    
         </div>
+        
     </main>
     <footer></footer>
 

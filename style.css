@@ -27,8 +27,7 @@ h2 {
 
 
 .main-selector {
-    display: flex;
-    height: 100vh;
+    display: flex; 
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: no-wrap;
@@ -39,7 +38,6 @@ h2 {
     padding: 0;
     cursor: pointer;
     flex-basis: 25%;
-    
 }
 .sport-selector img {
     max-width: 100%;
@@ -52,4 +50,35 @@ h2 {
     color: white;
     font-weight: bold;
 }
+
+.forms {
+    display: flex;
+    flex-direction: column;
+}
+
+#average {
+    align-self: flex-start;
+}
+
+form .stat-row {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    margin: 5px;
+}
+
+input {
+    width: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+
 

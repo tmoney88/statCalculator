@@ -1,32 +1,12 @@
 const baseball = document.querySelector('#baseball-selector');
 const basketball = document.querySelector('#basketball-selector');
 const football = document.querySelector('#football-selector');
-
 const allSports = document.querySelectorAll('.sport-selector');
 
-// function highlighted (e) {
-//     this.classList.add('selected');
-// }
+const hits = document.querySelector('#hits');
+const atBats = document.querySelector('#atBats');
+const calculatedAverage = document.querySelector('.calculatedAverage');
 
-// selectedSport.forEach(sport => sport.addEventListener('click', highlighted));
-
-function baseballSelected(e) {
-	baseball.classList.add('selected');
-	basketball.classList.remove('selected');
-	football.classList.remove('selected');
-}
-
-function basketballSelected(e) {
-	basketball.classList.add('selected');
-	football.classList.remove('selected');
-	baseball.classList.remove('selected');
-}
-
-function footballSelected(e) {
-	football.classList.add('selected');
-	baseball.classList.remove('selected');
-	basketball.classList.remove('selected');
-}
 
 function addSelected(e) {
 	// Remove all other selected div's.
@@ -37,6 +17,16 @@ function addSelected(e) {
 	this.classList.add('selected');
 }
 
+function battingAverage(e) {
+	e.preventDefault();
+	const numHits = hits.value;
+	const numAtBats = atBats.value;
+	const average = ( numHits / numAtBats).toFixed(3);
+	calculatedAverage.textContent = average;
+}
+
+
 baseball.addEventListener('click', addSelected);
 basketball.addEventListener('click', addSelected);
 football.addEventListener('click', addSelected);
+baseballButton.addEventListener('click', battingAverage);
