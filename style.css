@@ -56,15 +56,17 @@ h2 {
     flex-direction: column;
 }
 
-#average {
-    align-self: flex-start;
-}
+
 
 form .stat-row {
     display: flex;
     justify-content: space-between;
     flex: 1;
     margin: 5px;
+}
+
+.forms p {
+    margin: 0;
 }
 
 input {
